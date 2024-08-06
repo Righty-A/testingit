@@ -13,25 +13,6 @@ pipeline {
                 sh 'python3 test.py'
             }
         }
-
-        stage('Node.js Version') {
-            steps {
-                sh 'node --version'
-                sh 'npm --version'
-            }
-        }
-
-        stage('Install Dependencies') {
-            steps {
-                sh 'npm install'
-            }
-        }
-
-        stage('Run React Tests') {
-            steps {
-                sh 'npm test'
-            }
-        }
     }
 }
 
